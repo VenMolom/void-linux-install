@@ -66,8 +66,9 @@ EOF
 
 echo hostonly=yes >> /etc/dracut.conf
 xbps-install -Suy void-repo-nonfree
-xbps-install -uy linux-firmware linux-firmware-network linux-firmware-amd
-xbps-install -y grub-x86_64-efi
+xbps-install -Suy linux-firmware linux-firmware-network linux-firmware-amd
+xbps-install -Suy curl xtools git
+xbps-install -Suy grub-x86_64-efi
 grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id="Void Linux"
 
 
@@ -83,7 +84,7 @@ sed -i 's/LANG=en_US\.UTF-8/LANG=en_GB\.UTF-8/' /etc/locale.conf
 xbps-reconfigure -f glibc-locales
 
 # logging
-xbps=install -Syu socklog-void
+xbps-install -Syu socklog-void
 ln -s /etc/sv/socklog-unix /var/service/
 ln -s /etc/sv/nanologd /var/service/
 
