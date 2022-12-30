@@ -18,7 +18,7 @@ rustup completions zsh > ~/.zfunc/_rustup
 rustup completions zsh cargo > ~/.zfunc/_cargo
 
 # launcher and console apps
-sudo xbps-install -Syu wofi btop ranger
+sudo xbps-install -Syu wofi btop ranger lazygit
 
 # nvim
 cargo install bob-nvim
