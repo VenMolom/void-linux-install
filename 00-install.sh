@@ -67,7 +67,7 @@ EOF
 echo hostonly=yes >> /etc/dracut.conf
 xbps-install -Suy void-repo-nonfree
 xbps-install -Suy linux-firmware linux-firmware-network linux-firmware-amd
-xbps-install -Suy curl xtools git
+xbps-install -Suy curl xtools git wget
 xbps-install -Suy grub-x86_64-efi
 grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id="Void Linux"
 
@@ -90,9 +90,6 @@ ln -s /etc/sv/nanologd /var/service/
 
 # make shutdown group
 groupadd shutdown
-chown root:shutdown /sbin/shutdown
-chmod 750 /sbin/shutdown
-chmod u+s /sbin/shutdown
 
 visudo
 
