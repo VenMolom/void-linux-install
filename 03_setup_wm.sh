@@ -4,15 +4,15 @@
 xbps-install -Suy mesa-dri vulkan-loader mesa-vulkan-radeon amdvlk mesa-vaapi mesa-vdpau
 
 # fonts
-xbps-install -Suy google-fonts-ttf 
+xbps-install -Suy google-fonts-ttf font-awesome6
 
 # seatd
 xbps-install -Suy seatd
 usermod -aG _seatd molom
 ln -s /etc/sv/seatd /var/service/
 
-# sway
-xbps-install -Suy sway swaylock swayidle
+# sway and utils
+xbps-install -Suy sway swayidle slurp grim dunst
 
 # login manager
 xbps-install -Suy tuigreet
