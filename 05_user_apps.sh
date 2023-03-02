@@ -68,3 +68,6 @@ cargo install sworkstyle
 
 # top bar utils
 sudo xbps-install -Syu libgirepository libgirepository-devel python3-gobject
+ 
+# zoxide
+sudo xbps-install -Syu zoxide
