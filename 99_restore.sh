@@ -12,5 +12,3 @@ btrfs sub snap /mnt/target/@snapshots/root /mnt/target/@root
 # Continue with install in sane way (don't create dirs and install stuff) into CHROOT to change disk UUIDs and update grub.
 # This will make sure grub and dracut images are restored.
 xbps-reconfigure -fa
-
-# On first boot go into recovery mode and reenable all needed services.
