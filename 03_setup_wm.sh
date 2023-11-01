@@ -1,7 +1,7 @@
 #! /bin/sh
 
 # graphics drivers
-xbps-install -Suy mesa-dri vulkan-loader mesa-vulkan-radeon amdvlk mesa-vaapi mesa-vdpau
+xbps-install -Suy nvidia nvidia-libs-32bit
 
 # fonts
 xbps-install -Suy google-fonts-ttf font-awesome6
