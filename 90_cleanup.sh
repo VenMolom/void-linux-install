@@ -1,2 +1,2 @@
-rm /etc/sv/greetd/down
+rm /usr/void-linux-install
 shutdown -r now
