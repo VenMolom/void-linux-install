@@ -16,53 +16,54 @@ git clone https://github.com/softmoth/zsh-vim-mode.git ${ZSH_CUSTOM:-~/.oh-my-zs
 git clone https://github.com/kutsan/zsh-system-clipboard ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-system-clipboard
 git clone https://github.com/joshskidmore/zsh-fzf-history-search ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-fzf-history-search
 
-# zoxide
-sudo xbps-install -Syu zoxide
-
-# prompt
-sudo xbps-install -Syu starship
-
 # rust and completions
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 rustup completions zsh > ~/.zfunc/_rustup
 rustup completions zsh cargo > ~/.zfunc/_cargo
 
-# launcher and console apps
-sudo xbps-install -Syu btop lazygit exa fd bat ripgrep delta lazygit
-
-# helix editor
-sudo xbps-install -Syu helix
-
-# fzf
-xbps-install -Syu fzf
-
 # music
 sudo xbps-install -Syu pkg-config alsa-lib-devel libssh-devel libssh2-devel dbus-devel libxcb libxcb-devel playerctl
 cargo install spotify_player --no-default-features --features='pulseaudio-backend streaming lyric-finder media-control image notify daemon'
 
+PACKAGES=""
+
+# prompt
+PACKAGES="$PACKAGES starship"
+
+# console apps
+PACKAGES="$PACKAGES btop lazygit exa fd bat ripgrep delta lazygit zoxide fzf"
+
+# helix editor
+PACKAGES="$PACKAGES helix"
+
 # video
-sudo xbps-install -Suy mpv mpv-mpris
+PACKAGES="$PACKAGES mpv mpv-mpris"
 
 # day and night light
-sudo xbps-install -Syu gammastep
+PACKAGES="$PACKAGES gammastep"
 
 # notifications manager
-sudo xbps-install -Syu dunst
+PACKAGES="$PACKAGES dunst"
 
 # mail client
-sudo xbps-install -Syu thunderbird thunderbird-i18n-en-GB
+PACKAGES="$PACKAGES thunderbird thunderbird-i18n-en-GB"
 
 # torrent client
-sudo xbps-install -Syu qbittorrent
+PACKAGES="$PACKAGES qbittorrent"
 
 # pdf reader
-sudo xbps-install -Syu zathura
+PACKAGES="$PACKAGES zathura"
 
 # proton mail bridge
-sudo xbps-install -Syu pass libsecret libsecret-devel
+PACKAGES="$PACKAGES pass libsecret libsecret-devel"
+
+# vpn client
+PACKAGES="$PACKAGES pass protonvpn-cli"
+
+# anki
+PACKAGES="$PACKAGES anki"
+
+sudo xbps-install -Suy $PACKAGES
 
 # install proton bridge from void-packages
-# vpn client
-sudo xbps-install -Suy protonvpn-cli
-
 # TODO: discord
