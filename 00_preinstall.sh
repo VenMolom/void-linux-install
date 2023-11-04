@@ -7,7 +7,7 @@
 
 mkfs.vfat -nBOOT -F32 /dev/nvme1n1p1
 mkswap -L SWAP /dev/nvme1n1p2
-mkfs.btrfs -L "Void Linux" /dev/nvme1n1p3
+mkfs.btrfs -f -L "Void Linux" /dev/nvme1n1p3
 
 # create subvolumes
 BTRFS_OPTS="rw,noatime,ssd,compress=zstd,space_cache=v2,commit=120"
