@@ -44,7 +44,7 @@ XBPS_ARCH=$ARCH xbps-install -Sy -r /mnt -R "$REPO" base-system btrfs-progs
 
 # chroot
 for dir in dev proc sys run; do mount --rbind /$dir /mnt/$dir; mount --make-rslave /mnt/$dir; done
-cp /void-linux-install /mnt/usr/
+cp -r /void-linux-install /mnt/usr/
 cp /etc/resolv.conf /mnt/etc/
 BTRFS_OPTS=$BTRFS_OPTS PS1='(chroot) # ' chroot /mnt/ /bin/bash
 
