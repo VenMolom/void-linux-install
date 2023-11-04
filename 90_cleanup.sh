@@ -1,2 +1,2 @@
-rm /usr/void-linux-install
+rm -r /usr/void-linux-install
 shutdown -r now
