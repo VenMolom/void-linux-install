@@ -1,7 +1,7 @@
 #! /bin/sh
 
 # prepare
-sudo xbps-install -Syu gcc vim cmake rsync unzip xdg-user-dirs xdg-desktop-portal xdg-desktop-portal-gtk xdg-utils meson libxkbcommon-devel cairo-devel libgomp-devel psmisc polkit
+sudo xbps-install -Syu gcc vim cmake rsync unzip xdg-user-dirs xdg-desktop-portal xdg-desktop-portal-gtk xdg-utils meson libxkbcommon-devel cairo-devel libgomp-devel psmisc polkit xsel
 
 # browser and terminal
 sudo xbps-install -Syu firefox wezterm wezterm-terminfo
