@@ -12,5 +12,3 @@ xbps-install -Suy xorg-minimal
 
 # i3 and fallback default apps
 xbps-install -Suy i3 i3status dmenu rxvt-unicode
-
-echo "exec i3" >> /home/molom/.xinitrc
