@@ -41,7 +41,7 @@ PACKAGES="$PACKAGES helix"
 PACKAGES="$PACKAGES mpv mpv-mpris"
 
 # day and night light
-PACKAGES="$PACKAGES gammastep"
+# PACKAGES="$PACKAGES gammastep"
 
 # notifications manager
 PACKAGES="$PACKAGES dunst"
